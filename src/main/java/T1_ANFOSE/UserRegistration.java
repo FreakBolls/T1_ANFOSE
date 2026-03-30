@@ -17,7 +17,7 @@ public class UserRegistration {
         if(user.getUsername().length() < 6 ||
         user.getUsername().length() > 12 ||
         !user.getUsername().matches("[a-zA-Z0-9]+")){
-            return "El nombre se usuario no es válido";
+            return "El nombre de usuario no es válido";
         }
 
 
