@@ -13,6 +13,14 @@ public class UserRegistration {
             return "Debe completar todos los campos requeridos";
         }
 
+        //validar Username
+        if(user.getUsername().length() < 6 ||
+        user.getUsername().length() > 12 ||
+        !user.getUsername().matches("[a-zA-Z0-9]+")){
+            return "El nombre se usuario no es válido";
+        }
+
+
         //validar Contraseña
         if(user.getPassword().length() < 8 ||
                 !user.getPassword().matches(".*[a-zA-Z].*") ||
