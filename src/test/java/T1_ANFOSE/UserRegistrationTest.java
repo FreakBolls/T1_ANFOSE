@@ -37,4 +37,14 @@ class UserRegistrationTest {
         assertEquals("La contraseña debe tener al menos 8 caracteres y contener letras y números", addResult);
     }
 
+    @Test
+    @DisplayName(("Should fail when email is invalid"))
+    void shouldFailWhenEmailIsInvalid() {
+        UserRegistration userRegistration = new UserRegistration();
+        User user = new User("Walter12","password1","correo",20);
+
+        String addResult = userRegistration.register(user);
+        assertEquals("Ingrese un correo electrónico válido", addResult);
+    }
+
 }
