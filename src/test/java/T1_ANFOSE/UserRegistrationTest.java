@@ -27,5 +27,14 @@ class UserRegistrationTest {
         assertEquals("El nombre de usuario no es válido", addResult);
     }
 
+    @Test
+    @DisplayName(("Should fail when password is invalid"))
+    void shouldFailWhenPasswordIsInvalid() {
+        UserRegistration userRegistration = new UserRegistration();
+        User user = new User("Walter12","pass","wanla@mail.com",20);
+
+        String addResult = userRegistration.register(user);
+        assertEquals("La contraseña debe tener al menos 8 caracteres y contener letras y números", addResult);
+    }
 
 }
