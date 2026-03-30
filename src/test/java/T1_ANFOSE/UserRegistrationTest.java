@@ -15,7 +15,16 @@ class UserRegistrationTest {
         String addResult = userRegistration.register(user);
         assertEquals("Debe completar todos los campos requeridos", addResult);
 
+    }
 
+    @Test
+    @DisplayName("Should fail when username is invalid")
+    void shouldFailWhenUsernameIsInvalid() {
+        UserRegistration userRegistration = new UserRegistration();
+        User user = new User("abc","password1","wanla@mail.com",20);
+
+        String addResult = userRegistration.register(user);
+        assertEquals("El nombre de usuario no es válido", addResult);
     }
 
 
