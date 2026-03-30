@@ -31,7 +31,7 @@ public class UserRegistration {
         //Email
         if(user.getEmail().length() < 8 ||
           !user.getEmail().contains("@")){
-            return "Ingrese un correo electronico válido";
+            return "Ingrese un correo electrónico válido";
         }
 
         //validar edad
