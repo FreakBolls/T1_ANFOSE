@@ -38,7 +38,7 @@ class UserRegistrationTest {
     }
 
     @Test
-    @DisplayName(("Should fail when email is invalid"))
+    @DisplayName(("Should fail when email is invalid  "))
     void shouldFailWhenEmailIsInvalid() {
         UserRegistration userRegistration = new UserRegistration();
         User user = new User("Walter12","password1","correo",20);
