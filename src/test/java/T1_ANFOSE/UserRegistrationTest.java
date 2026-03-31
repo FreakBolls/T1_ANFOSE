@@ -47,4 +47,14 @@ class UserRegistrationTest {
         assertEquals("Ingrese un correo electrónico válido", addResult);
     }
 
+    @Test
+    @DisplayName(("Should fail when user is underage"))
+    void shouldFailWhenUserIsUnderage() {
+        UserRegistration userRegistration = new UserRegistration();
+        User user = new User("Walter12","password1","wanla@mail.com",15);
+        String addResult = userRegistration.register(user);
+        assertEquals("Debe ser mayor de edad para registrarse", addResult);
+    }
+
+
 }
