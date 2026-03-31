@@ -56,5 +56,14 @@ class UserRegistrationTest {
         assertEquals("Debe ser mayor de edad para registrarse", addResult);
     }
 
+    @Test
+    @DisplayName(("Should register user successfully"))
+    void shouldRegisterUserSuccessfully() {
+        UserRegistration userRegistration = new UserRegistration();
+        User user = new User("FreakBolas12","Freki994?","wanla@gmail.com",20);
+        String addResult = userRegistration.register(user);
+        assertEquals("El usuario ha sido registrado correctamente", addResult);
+
+    }
 
 }
